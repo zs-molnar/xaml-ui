@@ -40,6 +40,10 @@
     transform: translateX(calc(-1 * var(--FlyoutSlideInLength)));
   }
 
+  &.transition-none {
+    transition: none;
+  }
+
   &.visible {
     opacity: 1;
     transform: translate(0, 0);

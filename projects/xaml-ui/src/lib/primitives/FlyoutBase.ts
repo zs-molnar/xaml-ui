@@ -109,7 +109,7 @@ export abstract class FlyoutBaseComponent implements OnDestroy {
     if (!overlayRef) return;
     
     this._overlayRef = undefined;
-    await resume_after(FlyoutPresenter.TransitionDuration);
+    if (this.transitionAnimation !== 'None') await resume_after(FlyoutPresenter.TransitionDuration);
 
     overlayRef.detach();
     overlayRef.dispose();

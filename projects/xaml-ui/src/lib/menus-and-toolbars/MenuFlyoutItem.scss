@@ -3,7 +3,8 @@
 :host {
   display: table-row;
 
-  &:hover:not(.disabled)>* {
+  &:hover:not(.disabled)>*,
+  &.submenu-open:not(.disabled)>* {
     background-color: var(--SubtleFillColorSecondary);
   }
 
@@ -48,5 +49,11 @@
 
   &:not(:empty) {
     padding-left: 6px;
+  }
+
+  & .chevron {
+    font-family: var(--SymbolFontFamily);
+    font-size: 8pt;
+    vertical-align: middle;
   }
 }

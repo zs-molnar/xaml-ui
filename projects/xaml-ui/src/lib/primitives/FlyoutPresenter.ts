@@ -1,6 +1,6 @@
 import { Component, HostBinding, HostListener, Input } from "@angular/core";
 
-export type FlyoutPresenterAnimation = 'Default' | 'SlideLeft' | 'SlideRight' | 'SlideUp' | 'SlideDown';
+export type FlyoutPresenterAnimation = 'Default' | 'SlideLeft' | 'SlideRight' | 'SlideUp' | 'SlideDown' | 'None';
 
 @Component({
   selector: 'FlyoutPresenter',
