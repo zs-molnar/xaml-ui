@@ -14,6 +14,7 @@ import { VerticalAlignment, HorizontalAlignment } from "../Common";
             [HorizontalContentAlignment]="HorizontalContentAlignment" [VerticalContentAlignment]="VerticalContentAlignment"><ng-content/></Button>
     <DropDownButton CornerRadius="0 4px 4px 0" (Click)="onDropDownClick()" [IsEnabled]="IsEnabled"/>
   </Grid>`,
+  styles: `dropdownbutton { border-left-width: 0; }`, // Remove the left border of the drop-down half to avoid double-width divider
   imports: [CommonModule, ButtonComponent, DropDownButtonComponent, GridModule]
 })
 export class SplitButtonComponent extends FrameworkElementComponent {
