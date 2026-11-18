@@ -15,9 +15,9 @@
 
 .icon {
   display: table-cell;
-  padding-left: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-left: var(--MenuFlyoutItemHorizontalPadding);
+  padding-top: var(--MenuFlyoutItemVerticalPadding);
+  padding-bottom: var(--MenuFlyoutItemVerticalPadding);
 
   border-radius: var(--ControlCornerRadius) 0 0 var(--ControlCornerRadius);
   font-family: var(--SymbolFontFamily);
@@ -34,17 +34,17 @@
 
 .text {
   display: table-cell;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  padding-top: var(--MenuFlyoutItemVerticalPadding);
+  padding-bottom: var(--MenuFlyoutItemVerticalPadding);
   white-space: nowrap;
 }
 
 .submenu-indicator {
   display: table-cell;
-  padding-right: 6px;
-  padding-top: 3px;
-  padding-bottom: 3px;
-  
+  padding-right: var(--MenuFlyoutItemHorizontalPadding);
+  padding-top: var(--MenuFlyoutItemVerticalPadding);
+  padding-bottom: var(--MenuFlyoutItemVerticalPadding);
+
   border-radius: 0 var(--ControlCornerRadius) var(--ControlCornerRadius) 0;
 
   &:not(:empty) {
