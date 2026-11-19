@@ -20,13 +20,13 @@
   }
 
   &:focus-within {
-    border-bottom-width: var(--TextControlBorderThicknessFocused);
     background-color: var(--TextControlBackgroundColorFocused);
     border-bottom-color: var(--TextControlElevationBorderColorFocused);
 
-    // The focused bottom border is thicker; take the difference out of the bottom padding so
-    // the content box — and therefore the text — stays put.
-    padding-bottom: calc(var(--TextControlPadding) + var(--TextControlBorderThickness) - var(--TextControlBorderThicknessFocused));
+    // The focused bottom border is thicker. Draw the extra thickness as an inset shadow just above the
+    // border instead of widening the border, so the box size and the text position stay the same,
+    // whatever padding the Padding input sets (an inline style would override a padding adjustment here).
+    box-shadow: inset 0 calc(var(--TextControlBorderThickness) - var(--TextControlBorderThicknessFocused)) 0 0 var(--TextControlElevationBorderColorFocused);
   }
 
   &.disabled {
