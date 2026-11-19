@@ -85,7 +85,11 @@
   background: var(--ControlFillColorDefault);
   border-color: var(--ControlStrokeColorDefault);
   color: var(--TextFillColorPrimary);
-  transition: all var(--ControlFastAnimationDuration);
+  // Only the state colours, not `all`: `all` also animates inherited `visibility`, so a button would
+  // stay visible for the duration after its hidden container has already disappeared.
+  transition: background-color var(--ControlFastAnimationDuration),
+              border-color var(--ControlFastAnimationDuration),
+              color var(--ControlFastAnimationDuration);
 
   &::ng-deep * {
     color: var(--TextFillColorPrimary);
